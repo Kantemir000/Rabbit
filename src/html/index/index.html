@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rabbit</title>
+    <link rel="stylesheet" href="../../css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="../../css/style.min.css">
+</head>
+<body class="main-body">
+    <section class="nav-panel">
+        <div class="container">
+            <header class="nav-panel__header">
+                <a href="#" class="nav-panel__logo-wrapper">
+                    <img src="../../img/logo/Rabbit.svg" alt="rabbit-logo" class="misic__logo-img">
+                </a>
+    
+                <div class="nav-panel__wrapper">
+                    <form class="search">
+                        <input id="search" type="text" name="search" class="search__input" placeholder="Type to search"/>
+                        <label for="search" class="search__icon-wrapper">
+                            <img for="search" class="search__icon" src="../../img/search/Search.svg" alt="search__icon">
+                        </label>
+                    </form>
+
+                    <button class="nav-panel__login-button">Login</button>
+                    <a href="#" class="nav-panel__profile"></a>
+                </div>  
+            </header>
+        </div>
+    </section>
+
+    <section class="genres">
+        <div class="container">
+            <h1 class="genres__title">Genres</h1>
+
+            <div class="genres__wrapper">
+                <!-- <div class="card card__gradient-indie">
+                    <h2 class="card__title">Indie</h2>
+                    <img src="img/genres/Indie.webp" alt="indie" class="card__img">
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <section class="music-player">  
+        <div class="music-player__wrapper">
+            <div class="music-player__song-descr-block">
+                <div class="music-player__song-img-wrapper">
+                    <img class="music-player__song-img" src="../../img/music-icon/square.svg" alt="">
+                </div>  
+    
+                <div class="music-player__txt-wrapper">  
+                    <div><p class="music-player__song-name"></p></div>           
+                    <div><p class="music-player__song-author"></p></div>
+                    
+                </div>
+            </div>
+    
+            <div class="music-player__control-wrapper">
+                <div class="music-player__control">
+                    <button class="music-player__prev-song">
+                        <img class="music-player__prev-song-icon" src="../../img/music-icon/prev.svg" alt="previous-song">
+                    </button>
+    
+                    <button class="music-player__play-pause">
+                        <img class="music-player__play-pause-icon" src="../../img/music-icon/play.svg" alt="play">
+                    </button>
+                    
+                    <button class="music-player__next-song">
+                        <img class="music-player__next-song-icon" src="../../img/music-icon/next.svg" alt="next-song">
+                    </button>
+                </div>
+                 
+                <div class="music-player__progress-song-wrapper"> 
+                    <span class="music-player__current-time">0:00</span>
+
+                    <!-- <div class="music-player__song-progress-area">
+                        <div class="music-player__song-progress">
+                            <audio data-audio src=""></audio>
+                        </div> 
+                    </div> -->
+                    
+                    <span class="music-player__max-duration">0:00</span>
+                </div>
+            </div>
+    
+            <div class="music-player__song-volume-wrapper">
+                <button class="music-player__song-volume">
+                    <img class="music-player__song-volume-icon" src="../../img/music-icon/volume.svg" alt="sound-on">
+                </button>
+                
+                <input class="music-player__slider" type="range"value="100" min="0" max="100">
+                <!-- <div class="music-player__song-volume-container">
+                    <div class="music-player__song-volume-line"></div>
+                </div>  -->
+            </div>
+        </div>
+        <!-- <div class="music-player__song-progress-area music-player__song-progress-area-for-small-devices">
+            <div class="music-player__song-progress">
+                <audio data-audio src=""></audio>
+            </div> 
+        </div>  -->
+
+    </section>
+
+    <section class="modal">
+        <div class="modal__dialog">
+            <!-- <div class="modal__content modal__content_login">
+                <form class="modal__form" action="#">
+                    <div class="modal__close-wrapper">
+                        <div data-close class="modal__close" data-close>&times;</div>
+                    </div>
+                    <div class="modal__title">Login</div>
+                    <input required placeholder="Name" name="name" type="text" class="modal__input">
+                    <input required placeholder="Password" name="phone" type="phone" class="modal__input">
+                    <button class="modal__btn">Log in</button>
+                </form>
+                <a class="modal__link modal__link_transition_signup">Sign Up</a>
+            </div> -->
+        </div> 
+    </section>
+
+    <script src="../../js/anime.min.js"></script>
+    <script src="../../js/add-profile-btn.js"></script>
+    <script src="../../js/animeEye.js"></script>
+    <script src="../../js/card.js"></script>
+    <script src="../../js/music-list.js"></script>
+    <script src="../../js/main-music-control.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+.track
+	padding: 6px
+	height: 70px
+	width: 100%
+	display: flex
+	justify-content: space-between
+	align-items: center
+	background: transparent	
+	&__info
+		overflow: hidden
+		white-space: nowrap
+		margin-right: 40px
+		width: 100%
+		height: 100%
+		display: flex
+		justify-content: start
+		align-items: center
+		transition: 0.3s all
+		&:active .track__img-wrapper 
+			transform: scale(0.8)
+			transition: 0.3s all
+	&__number
+		margin-right: 20px
+		display: flex
+		font-size: 1.5rem
+		font-weight: 800
+		color: rgba(255,255,255,.6)
+	&__img-wrapper
+		margin-right: 15px
+		height: 100%
+		transition: 0.3s all
+	&__img
+		display: flex
+		height: 100%
+		width: 58px
+		opacity: .9
+		border-radius: 4px
+	&__name, &__author
+		display: flex
+		font-weight: 800
+		color: #fff
+	&__name
+		font-size: 1.6rem
+		margin-bottom: 5px
+	&__author
+		font-size: 1.5rem
+		color: rgba(255,255,255,.6)
+		margin-bottom: 0
+	&__control
+		height: 100%
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__download-button, &__favorites-button
+		display: flex
+		justify-content: center
+		align-items: center
+		background: transparent
+		height: 100%
+		width: 100%
+	&__favorites-button
+		margin-right: 17px
+	&__download-icon, &__favorites-icon
+		height: 37%
+		min-width: 100%
+		transition: 0.3s all
+		&:active
+			transform: scale(0.8)
+			transition: 0.3s all
+
+@media (max-width: 768px)
+	.track
+		&__number
+			display: none
+
+@media (max-width: 616px)
+	.track
+		height: 60px
+		&__number
+			display: none
+		&__download-icon, &__favorites-icon
+			height: 40%
+		&__name
+			font-size: 1.4rem
+		&__author
+			font-size: 1.3rem
+		&__img
+			width: 48px
+	
+	
+		
+
+

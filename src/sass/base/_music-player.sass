@@ -1,0 +1,185 @@
+.music-player
+	background: linear-gradient(180deg, rgba(16, 34, 54, 0.8) 0%, rgba(16, 34, 54, 0.8) 100%)
+	height: 100px
+	width: 100%
+	padding: 18px 
+	position: fixed
+	left: 0
+	bottom: 0
+	&__wrapper
+		height: 100%
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&__song-descr-block
+		display: flex
+		justify-content: space-between
+		align-items: center
+		height: 100%
+	&__song-img-wrapper
+		margin-right: 18px
+		height: 100%   
+		transition: 0.3s all
+		&:active
+			transform: scale(0.9)
+			transition: 0.3s all
+	&__song-img
+		border-radius: 4px
+		display: flex
+		height: 100%
+		width: 100%
+		opacity: 0.9 
+	&__txt-wrapper
+		display: block
+		width: 150px
+		overflow: hidden
+		white-space: nowrap
+		div
+			display: flex
+	&__txt-subwrapper
+		display: flex
+	&__song-name, &__song-author
+		display: flex
+		font-weight: 800
+		margin-bottom: 0
+		color: #FFFFFF
+	&__song-name	
+		font-size: 1.4rem
+	&__song-author
+		font-size: 1.3rem
+		color: rgba(255, 255, 255, 0.6)
+
+	&__control-wrapper
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		width: 36%
+		/* width: 500px */
+		display: flex
+		flex-direction: column
+		align-content: center
+		justify-content: center
+	&__control
+		display: flex
+		justify-content: center
+		align-items: center
+		button
+			background: transparent
+	&__play-pause
+		height: 43px
+		margin: 0 25px
+		transition: 0.2s all
+		&:active
+			transform: scale(0.8)
+			transition: 0.3s all
+		&-icon
+			height: 100%
+		&-fixed
+			height: 50px
+			background: transparent
+			position: absolute
+			top: 0
+			left: 50%
+			transform: translateX(-50%)
+	&__next-song, &__prev-song
+		height: 25px
+		transition: 0.2s all
+		&:active
+			transform: scale(0.7)
+			transition: 0.3s all
+		&-icon
+			height: 100%
+	&__progress-song-wrapper
+		margin-top: 5px
+		display: flex
+		justify-content: center
+		align-items: center
+	&__current-time, &__max-duration
+		font-weight: 800
+		font-size: 1.4rem
+		color: #64748b
+	&__current-time
+		order: 0
+	&__max-duration
+		order: 2
+	&__song-progress-area
+		order: 1
+		margin: 0 5px 0 5px
+		flex: 1
+		height: 6px
+		max-width: 100%
+		background: rgb(100, 116, 139)
+		border-radius: 10px
+		cursor: pointer
+		&-for-small-devices
+			display: block
+			margin: 0
+			position: fixed
+			width: 100%
+			left: 0
+			bottom: 0
+			border-radius: 0
+	&__song-progress
+		height: 6px
+		width: 0
+		border-radius: 10px
+		background: $main-color
+		transition: 0.2s all
+
+	&__song-volume-wrapper
+		display: flex
+		justify-content: center
+		align-items: center
+	&__song-volume
+		background: transparent
+		transition: 0.2s all
+		&:active
+			transform: scale(0.8)
+			transition: 0.3s all
+	&__song-volume-icon
+		margin-right: 5px
+			
+@media (max-width: 767px) 
+	.music-player
+		&__txt-wrapper
+			max-width: 110px
+	
+@media (max-width: 616px) 
+	.music-player
+		height: 60px
+		padding: 5px 10px 11px 10px
+		&__play-pause
+			height: 34px
+		&__next-song, &__prev-song
+			height: 25px
+		&__song-name
+			font-size: 1.2rem
+		&__song-author
+			font-size: 1.1rem
+		&__song-img-wrapper
+			margin-right: 10px
+		&__control-wrapper
+			left: auto
+			right: 3%
+			top: 17%
+			transform: none
+			width: auto
+		&__song-progress-area
+			height: 3px
+		&__song-progress
+			height: 3px
+
+@media (max-width: 425px) 
+	.music-player
+		&__txt-wrapper
+			max-width: 100px
+	
+	  	
+
+
+	
+	
+	
+

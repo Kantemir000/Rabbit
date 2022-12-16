@@ -1,0 +1,65 @@
+.card
+	display: flex
+	position: relative
+	width: 17vw
+	height: 15vw
+	border-radius: 10px 10px 100% 10px
+	transition: 0.3s all
+	text-decoration: none
+	&_gradient-indie
+		background: linear-gradient(135deg, #608108 0%, rgba(96, 129, 8, 0) 100%)
+	&_gradient-hip-hop
+		background: linear-gradient(135deg, #BA5D07 0%, rgba(186, 93, 7, 0) 100%)
+	&_gradient-pop
+		background: linear-gradient(135deg, #8D67AB 0%, rgba(141, 103, 171, 0) 100%)
+	&_gradient-rock
+		background: linear-gradient(135deg, #c1081a 0%, rgba(233, 20, 41, 0) 100%)
+	&_gradient-metal
+		background: linear-gradient(135deg, #503750 0%, rgba(80, 55, 80, 0) 100%)
+	&_gradient-classical
+		background: linear-gradient(135deg, #5179A1 0%, rgba(81, 121, 161, 0) 100%)
+	&_gradient-jazz
+		background: linear-gradient(135deg, #8C1932 0%, rgba(140, 25, 50, 0) 100%)
+	&_gradient-blues
+		background: linear-gradient(135deg, #AF2896 0%, rgba(175, 40, 150, 0) 100%)
+	&:hover
+		transform: scale(1.1)
+		transition: 0.5s all
+	&__title
+		display: block
+		margin: 30px 0 0 30px
+		font-weight: 800
+		font-size: 2.7vw
+		color: #FFFFFF
+	&__img
+		position: absolute
+		max-height: 44%
+		right: 0
+		bottom: 0
+		mix-blend-mode: luminosity
+		border-radius: 100% 0px 50%
+
+@media (max-width: 1024px) 
+	.card
+		justify-content: center
+		width: 17vh
+		height: 15vh
+		&__title
+			font-size: 2.7vh
+			margin: 30px 0 0 0
+			display: flex
+			justify-content: center
+		&:hover
+			transform: none
+
+@media (max-width: 576px) 
+	.card
+		width: 20vh
+		height: 18vh
+		&__title
+			font-size: 3.5vh
+
+
+			
+
+

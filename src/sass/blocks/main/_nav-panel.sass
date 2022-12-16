@@ -1,0 +1,67 @@
+.nav-panel
+	&__header
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-top: 30px
+		height: 68px
+	&__logo-wrapper
+		display: flex
+		height: 100%
+	&__wrapper
+		position: relative
+		height: 100%
+		max-width: 980px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 14px
+	&__wrapper::before
+		position: absolute
+		content: ""
+		inset: 0
+		border: 2px solid transparent
+		border-radius: 50px
+		background: linear-gradient(90deg, rgba(65,113,255,1) 0%, rgba(12,178,255,1) 100%) border-box
+		mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)
+		mask-composite: xor
+		mask-composite: exclude
+	&__login-button, &__profile
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-left: 10px
+		position: relative
+		max-width: 100%
+		padding: 0 20px
+		height: 100%
+		background: linear-gradient(90deg, rgb(12, 178, 255) 0%, rgb(65, 113, 255) 100%)
+		border-radius: 40px
+		font-weight: 800
+		font-size: 1.6rem
+		cursor: pointer 
+		color: black
+		transition: 0.3s all
+		&:active
+			transform: scale(0.9)
+			transition: 0.3s all
+	&__profile
+		display: none
+		text-decoration: none
+		color: #000000
+		&:visited
+			color: #000000
+		&:focus
+			color: #000000
+		
+@media (max-width: 576px)
+	.nav-panel
+		&__header
+			height: 60px
+		&__login-button, &__profile
+			font-size: 1.4rem
+
+	
+
+
+

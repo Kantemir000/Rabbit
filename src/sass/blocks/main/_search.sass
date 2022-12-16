@@ -1,0 +1,59 @@
+//textarea.search__input:-webkit-autofill,
+//textarea.search__input:-webkit-autofill:hover,
+//textarea.search__input:-webkit-autofill:focus,
+//select.search__input:-webkit-autofill,
+//select.search__input:-webkit-autofill:hover,
+//select.search__input:-webkit-autofill:focus 
+input.search__input:-webkit-autofill,
+input.search__input:-webkit-autofill:hover, 
+input.search__input:-webkit-autofill:focus
+	-webkit-text-fill-color: rgb(100, 116, 139)
+	-webkit-box-shadow: 0 0 0 1000px rgb(21,49,88) inset
+	border: 1px solid rgb(35, 150, 255)
+	transition: 0 all
+	
+.search 
+	min-width: 50px
+	height: 100%
+	position: relative
+	inset: 0
+	border-radius: 100%
+	&__icon-wrapper 
+		width: 50px
+		height: 100%
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		display: flex
+		justify-content: center
+		align-items: center
+		border-radius: 30px
+		background: rgba(35, 150, 255, 0.21)
+		transition:  0.8s all
+		cursor: pointer
+	&__input
+		width: 0
+		height: 100%
+		padding: 6px 15px
+		font-weight: 800
+		font-size: 16px
+		border-radius: 30px
+		background: rgba(35, 150, 255, 0.21)
+		color: rgb(100, 116, 139)
+		opacity: 0
+		transition: 0.8s all
+		border: none
+		outline: none
+		&:focus 
+			width: 400px
+			opacity: 1
+		&:focus ~ .search__icon-wrapper
+			background: none
+		&::placeholder
+			color: rgb(100, 116, 139)
+
+
+			
+
+	  

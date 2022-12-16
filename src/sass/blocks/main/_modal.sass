@@ -1,0 +1,124 @@
+//textarea.modal__input:-webkit-autofill,
+//textarea.modal__input:-webkit-autofill:hover,
+//textarea.modal__input:-webkit-autofill:focus,
+//select.modal__input:-webkit-autofill,
+//select.modal__input:-webkit-autofill:hover,
+//select.modal__input:-webkit-autofill:focus 
+input.modal__input:-webkit-autofill,
+input.modal__input:-webkit-autofill:hover, 
+input.modal__input:-webkit-autofill:focus
+	-webkit-text-fill-color: #fff
+	-webkit-box-shadow: 0 0 0 1000px rgb(17,33,52) inset
+	border: 2px solid rgb(35, 150, 255)
+	transition: 0 all
+
+.modal 
+	width: 100%
+	height: 100%
+	position: fixed
+	inset: 0
+	display: none
+	justify-content: center
+	align-items: center
+	overflow: hidden
+	background-color: rgba(16, 16, 28, 0.5)
+	z-index: 100
+	transition: all 3s
+	&_show
+		display: flex
+	&__dialog 
+		max-width: 600px
+	&__content
+		position: relative
+		width: 100%
+		padding: 20px 40px 
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		background: linear-gradient(180deg, rgba(16, 34, 54, 0.9) 0%, rgba(16, 34, 54, 0.9) 100%)
+		border: none
+		border-radius: 15px
+		overflow-y: auto	
+		&_signup
+			display: none
+	&__form
+		margin-bottom: 10px
+	&__close-wrapper
+		position: absolute
+		top: 8px
+		right: 8px
+		height: 30px
+		width: 30px
+		display: flex
+		align-items: center
+		justify-content: center
+	&__close 
+		font-size: 30px
+		font-weight: 800
+		border: none
+		cursor: pointer
+		color: rgba(255, 255, 255, 0.5)
+	&__title, &__login-error
+		display: block
+		margin-bottom: 20px
+		text-align: center
+		font-weight: 800
+		font-size: 22px
+		color: $main-color
+	&__login-error
+		margin-bottom: 10px
+		font-size: 14px
+	&__input, &__btn
+		display: block
+		width: 280px
+		height: 50px
+		border: 2px $main-color solid
+		font-weight: 800
+		font-size: 18px
+		text-align: center
+		padding: 0 20px
+		outline: none
+		border-radius: 8px
+	&__input
+		background: transparent
+		color: #fff
+		&::placeholder 
+			color: rgba(35, 149, 255, 0.5)
+		&-wrapper
+			position: relative
+			margin-bottom: 20px
+	&__name-error, &__password-error
+		margin-bottom: 10px
+		font-weight: 800
+		font-size: 14px
+		text-align: center
+		color: $main-color
+	&__btn 
+		background: $main-color
+		color: #000000
+	&__link
+		line-height: 30px
+		font-weight: 800
+		font-size: 14px
+		text-align: center
+		color: $main-color
+		cursor: pointer
+	&__eye-show-password
+		height: 33px
+		width: 33px
+		position: absolute
+		right: 5px
+		top: 50%
+		transform: translateY(-50%)
+		cursor: pointer
+
+@media (max-width: 375px) 
+	.modal
+		&__content
+			padding: 20px 20px
+		&__input, &__btn 
+			width: 260px
+
+
+	
+

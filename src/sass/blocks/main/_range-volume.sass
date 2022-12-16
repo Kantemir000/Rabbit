@@ -1,0 +1,61 @@
+.music-player__slider
+	border-radius: 10px
+	border: none
+
+input[type=range] 
+	-webkit-appearance: none
+	appearance: none
+	width: 100px
+	background: transparent
+	cursor: pointer 
+
+input[type=range]:focus 
+	outline: none
+
+input[type=range]::-ms-track 
+	width: 100px
+	cursor: pointer
+	/* Hides the slider so custom styles can be added */
+	background: transparent
+	border-color: transparent
+	color: transparent
+
+input[type=range]::-webkit-slider-runnable-track
+	height: 6px
+	border-radius: 10px
+	border: none
+	background-color: transparent
+
+input[type=range]::-webkit-slider-thumb
+	-webkit-appearance: none
+	appearance: none
+	height: 6px
+	width: 5px
+	border-radius: 0 10px 10px 0
+	background: $main-color 
+
+input[type="range"]:focus::-webkit-slider-thumb 
+	border: none
+	outline: none
+
+
+/******** Firefox styles ********/
+/* slider track */
+input[type="range"]::-moz-range-track 
+	height: 6px
+	border-radius: 10px
+	border: none
+	background-color: transparent
+
+/* slider thumb */
+input[type="range"]::-moz-range-thumb 
+	border: none /*Removes extra border that FF applies*/
+	border-radius: 0 10px 10px 0 /*Removes default border-radius that FF applies*/
+	height: 6px
+	width: 5px
+	border-radius: 10px
+	background: $main-color 
+
+input[type="range"]:focus::-moz-range-thumb 
+	border: none
+	outline: none

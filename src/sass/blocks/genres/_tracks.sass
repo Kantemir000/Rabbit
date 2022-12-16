@@ -1,0 +1,38 @@
+.tracks
+	margin-top: 34vw
+	position: relative
+	padding-top: 45px
+	height: 100vh
+	border-radius: 25px 25px 0 0
+	padding-bottom: 100px
+	/* border-radius: 10px 10px 0 0 */
+	background: linear-gradient(90deg, #181836 0%, rgba(11,17,32,1) 100%)
+	&__line
+		display: none
+
+@media (max-width: 1024px) 
+	.tracks
+		margin-top: 34vh
+		&__line
+			display: block
+			position: absolute
+			top: 10px
+			left: 50%
+			transform: translateX(-50%)
+			height: 4px
+			width: 45px
+			border-radius: 5px
+			background: $main-color
+@media (max-width: 731px)
+	.tracks
+		padding: 45px 30px 100px 30px
+
+@media (max-width: 576px) 
+	.tracks
+		padding: 45px 20px 60px 20px
+
+	
+
+
+
+		
