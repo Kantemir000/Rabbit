@@ -4,28 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HipHop</title>
+    <title>Profile</title>
     <link rel="stylesheet" href="../../css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="../../css/style.min.css">
 </head>
-<body class="album-body album-body_hip-hop">
+<body class="profile-body">
     <section class="exit">
         <a href="../index/index.html" class="exit__icon-wrapper">
             <img class="exit__icon" src="../../img/page-exit/arrow-left.svg" alt="album-exit">
         </a>
-        <h2 class="exit__title">Hip Hop</h2>
+        <h2 class="exit__title">Favorites</h2>
     </section>
-
-    <section class="album">
-        <div class="container">
-            <div class="card card_gradient-hip-hop album__card">
-                <h1 class="card__title">Hip Hop</h1>
-                <img src="../../img/genres/hip-hop.jpg" alt="hip-hop" class="card__img">
+    
+    <section class="profile">
+        <div class="profile__img-wrapper">
+            <img src="../../img/profile/profile.jpg" alt="profile" class="profile__img">
+        </div>
+        <div class="profile__name-wrapper">
+            <div class="profile__name-subwrapper">
+                <h1 class="profile__name"></h1>
+                <a href="../index/index.html" class="profile__exit-wrapper">
+                    <img src="../../img/logout/exit.svg" alt="exit" class="profile__exit">
+                </a>
             </div>
         </div>
     </section>
 
-    <section class="tracks album-body__tracks" data-card="hipHop">
+    <section class="tracks profile-body__tracks">
         <div class="container">
             <div class="tracks__list">
                 <!-- <div class="track">
@@ -45,7 +50,7 @@
                 </div> -->
             </div>
         </div>
-        <div class="tracks__line"></div>
+        <div class="tracks__line"></div> 
     </section>
 
     <section class="music-player">  
@@ -77,15 +82,15 @@
                     </button>
                 </div>
                  
-                <div class="music-player__progress-song-wrapper">
+                <div class="music-player__progress-song-wrapper"> 
                     <span class="music-player__current-time">0:00</span>
-            
+
                     <!-- <div class="music-player__song-progress-area">
                         <div class="music-player__song-progress">
                             <audio data-audio src=""></audio>
                         </div> 
                     </div> -->
-    
+                    
                     <span class="music-player__max-duration">0:00</span>
                 </div>
             </div>
@@ -101,16 +106,18 @@
                 </div>  -->
             </div>
         </div>
-
         <!-- <div class="music-player__song-progress-area music-player__song-progress-area-for-small-devices">
             <div class="music-player__song-progress">
                 <audio data-audio src=""></audio>
             </div> 
         </div>  -->
+
     </section>
+    <script src="../../js/modules/profile/add-name-profile.js"></script>
+    <script src="../../js/modules/profile/exit-profile.js"></script>
     <script src="../../js/modules/tracks-list-menu/fixed-menu-opacity.js"></script>
-    <script src="../../js/modules/track/create-track.js"></script>
-    <script src="../../js/modules/player/music-control.js"></script>
-    <script src="../../js/modules/track/checking-favorites-in-album.js"></script>
+    <script src="../../js/modules/track/create-favorites-tracks.js"></script>
+    <script src="../../js/modules/player/profile-music-control.js"></script>
+    <script src="../../js/modules/track/checking-favorites-in-profile.js"></script>
 </body>
 </html>

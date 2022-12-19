@@ -106,6 +106,8 @@ const login = () => {
     console.log(storedName);
         
     if (name.value == storedName && pw.value == storedPw){
+        //Чтобы кнопка профиля на главной странице отображалась, надо удалить loggedOutOfProfile
+        localStorage.removeItem("loggedOutOfProfile");
         addProfileBtn();
         closeModal(".modal");
     } else {
@@ -150,6 +152,8 @@ const signup = () => {
     } else {
         localStorage.setItem('name', name.value);
         localStorage.setItem('pw', pw.value);
+        //Чтобы кнопка профиля на главной странице отображалась, надо удалить loggedOutOfProfile
+        localStorage.removeItem("loggedOutOfProfile");
         addProfileBtn();
         closeModal(".modal");
     }

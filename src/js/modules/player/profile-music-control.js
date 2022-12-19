@@ -1,3 +1,9 @@
+/* Ключевые отличия от music-control:
+1) Вместо альбома в переменную album помещаем избранные треки с помощью createAlbumFavorites;
+2) В loadMusic меняем пути;
+3) В playTrack меняем пути и способ получения idTrack.
+*/
+
 const createProgressArea = (musicPalyerSelector, progressSongWrapperSelector) => {
 	const musicPalyer = document.querySelector(musicPalyerSelector),
 		progressSongWrapper = document.querySelector(progressSongWrapperSelector);
@@ -40,12 +46,32 @@ const musicPalyer = document.querySelector(".music-player"),
 	volume = musicPalyer.querySelector(".music-player__song-volume"),
 	mySlider = musicPalyer.querySelector(".music-player__slider"),
 	nameAlbum = document.querySelector(".tracks"),
+    tracks = document.querySelectorAll(".track"),
 	tracksList = document.querySelector(".tracks__list"),
 	tracksNum = document.querySelectorAll(".track__number"),
 	tracksName = document.querySelectorAll(".track__name");
 
+const storageMusic = JSON.parse(localStorage.getItem("dataCard"));
+
 let idTrack,
-	album = storageMusic[document.querySelector(".tracks").dataset.card];
+	album = [];
+
+const createAlbumFavorites = () => {
+    let idFavoritesTrack = 0;
+
+    for (key in storageMusic) {    
+        storageMusic[key].forEach((music, i) => {
+            tracks.forEach(track => {
+                if(i == track.dataset.track && key == track.dataset.album) {
+                    album[idFavoritesTrack] = music;
+                    idFavoritesTrack += 1;
+                }
+            });
+        });
+    }
+};
+
+createAlbumFavorites();
 
 //Animation text(name song, artist)
 const animationTxt = () => {
@@ -77,12 +103,16 @@ const changeTextColor = (text) => {
 };
 
 const loadMusic = idTrack => {
-	musicName.innerText = `${album[idTrack].name}`;
-	musicAuthor.innerText = album[idTrack].artist;
-	musicImg.src = `../../img/music-img/${nameAlbum.dataset.card}/${album[idTrack].img}.jpg`;
-	musicImg.alt = `${album[idTrack].img}`;
-	mainAudio.src = `../../music/${nameAlbum.dataset.card}/${album[idTrack].src}.mp3`;
-	animationTxt();
+    tracks.forEach((track, i) => {
+        if(i == idTrack) {
+            musicName.innerText = `${album[idTrack].name}`;
+            musicAuthor.innerText = album[idTrack].artist;
+            musicImg.src = `../../img/music-img/${track.dataset.album}/${album[idTrack].img}.jpg`;
+            musicImg.alt = `${album[idTrack].img}`;
+            mainAudio.src = `../../music/${track.dataset.album}/${album[idTrack].src}.mp3`;
+            animationTxt();
+        }
+    });
 };
 
 const playMusic = () => {
@@ -126,18 +156,18 @@ const playPauseSong = () => {
 };
 
 
-//При клике на трек включается музыка
+//При клике на трек включается музыка 
 const playTrack = (e) => {
 	const target = e.target;
 
 	if(target && !target.closest(".track__control")) {
-		idTrack = Number(target.closest(".track").dataset.track);
-		/* console.log(idTrack) */
+		idTrack = Number(target.closest(".track").id);
+
 		musicName.innerText = `${album[idTrack].name}`;
 		musicAuthor.innerText = album[idTrack].artist;
-		musicImg.src = `../../img/music-img/${nameAlbum.dataset.card}/${album[idTrack].img}.jpg`;
+		musicImg.src = `../../img/music-img/${target.closest(".track").dataset.album}/${album[idTrack].img}.jpg`;
 		musicImg.alt = `${album[idTrack].img}`;
-		mainAudio.src = `../../music/${nameAlbum.dataset.card}/${album[idTrack].src}.mp3`;
+		mainAudio.src = `../../music/${target.closest(".track").dataset.album}/${album[idTrack].src}.mp3`;
 
 		changeTextColor(tracksNum);
 		changeTextColor(tracksName);

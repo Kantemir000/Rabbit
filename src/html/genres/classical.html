@@ -8,12 +8,16 @@
     <link rel="stylesheet" href="../../css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="../../css/style.min.css">
 </head>
-<body class="body body_classical">
+<body class="album-body album-body_classical">
+    <section class="exit">
+        <a href="../index/index.html" class="exit__icon-wrapper">
+            <img class="exit__icon" src="../../img/page-exit/arrow-left.svg" alt="album-exit">
+        </a>
+        <h2 class="exit__title">Classical</h2>
+    </section>
+
     <section class="album">
         <div class="container">
-            <a href="../index/index.html" class="album__exit">
-                <img class="album__exit-icon" src="../../img/music-icon/arrow-left.svg" alt="album-exit">
-            </a>
             <div class="card card_gradient-classical album__card">
                 <h1 class="card__title">Classical</h1>
                 <img src="../../img/genres/classical.jpg" alt="classical" class="card__img">
@@ -21,7 +25,7 @@
         </div>
     </section>
 
-    <section class="tracks" data-card="classical">
+    <section class="tracks album-body__tracks" data-card="classical">
         <div class="container">
             <div class="tracks__list">
                 <!-- <div class="track">
@@ -48,7 +52,7 @@
         <div class="music-player__wrapper">
             <div class="music-player__song-descr-block">
                 <div class="music-player__song-img-wrapper">
-                    <img class="music-player__song-img" src="../../img/music-icon/square.svg" alt="">
+                    <img class="music-player__song-img" src="../../img/no-track-image/square.svg" alt="no-track-image">
                 </div>  
     
                 <div class="music-player__txt-wrapper">  
@@ -104,10 +108,9 @@
             </div> 
         </div>  -->
     </section>
-    <script src="../../js/fixedMenuOpacity.js"></script>
-    <script src="../../js/music-list.js"></script>
-    <script src="../../js/track.js"></script>
-    <script src="../../js/music-control.js"></script>
-    <script src="../../js/favorites.js"></script>
+    <script src="../../js/modules/tracks-list-menu/fixed-menu-opacity.js"></script>
+    <script src="../../js/modules/track/create-track.js"></script>
+    <script src="../../js/modules/player/music-control.js"></script>
+    <script src="../../js/modules/track/checking-favorites-in-album.js"></script>
 </body>
 </html>
