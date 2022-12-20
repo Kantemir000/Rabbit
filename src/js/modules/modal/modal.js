@@ -137,7 +137,9 @@ const signup = () => {
     //Проверка имени
     if (name.value.length < 5) {
             textError(nameError, "10px", "At least 5 characters");
-    } 
+    } else if (name.value.length > 18){
+        textError(nameError, "10px", "No more than 18 characters");
+    }
     //Проверка пароля
     if (pw.value.length < 8) {
         textError(passwordError, "10px", "At least 8 characters");
@@ -149,6 +151,8 @@ const signup = () => {
         textError(passwordError, "10px", "Add number");
     } else if (name.value.length < 5) { //Чтобы при вводе правильного пароля, данные не отправились без имени
         textError(nameError, "10px", "At least 5 characters");
+    } else if (name.value.length > 18){
+        textError(nameError, "10px", "No more than 18 characters");
     } else {
         localStorage.setItem('name', name.value);
         localStorage.setItem('pw', pw.value);

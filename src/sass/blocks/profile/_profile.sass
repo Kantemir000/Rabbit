@@ -1,6 +1,6 @@
 .profile
 	position: fixed
-	top: 9vh
+	top: 6vw
 	left: 0
 	right: 0
 	margin: 0 auto
@@ -8,11 +8,11 @@
 		display: flex
 		justify-content: center
 	&__img
-		height: 40vh
-		width: 40vh
+		height: 24vw
+		width: 24vw
 		border-radius: 50%
 	&__name-wrapper
-		margin-top: 3vh
+		margin-top: 1.7vw
 		display: flex
 		justify-content: center
 	&__name-subwrapper
@@ -22,48 +22,62 @@
 		display: flex
 		justify-content: center
 		align-items: center
-		width: 28vh
-		padding: 0 20px
-		height: 8.5vh
+		min-width: 5vw
+		padding: 0 2.5vw
+		height: 5.3vw
 		font-weight: 700
-		font-size: 4vh
+		font-size: 2.3vw
 		color: #fff
+		margin-bottom: 0
 		&::before
 			position: absolute
 			content: ""
 			inset: 0
-			border: 2px solid transparent
-			border-radius: 5vh
+			border: 4px solid transparent
+			border-radius: 10vw
 			background: linear-gradient(45deg, rgb(180, 6, 180) 0%, $main-color 100%) border-box
 			mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)
 			mask-composite: xor
 			mask-composite: exclude
 	&__exit-wrapper
-		height: 4vh
 		position: absolute
 		top: 50%
-		right: -5.5vh
+		right: -3.5vw
 		transform: translateY(-50%)
+		margin: 0 auto
 	&__exit
-		height: 100%
+		height: 2.5vw
 
 @media (max-width: 1024px)
 	.profile
-		top: 9vw
+		top: 8.5vh
 		&__img
-			height: 40vw
-			width: 40vw
+			height: 24vh
+			width: 24vh
 		&__name-wrapper
-			margin-top: 3vw
+			margin-top: 1.7vh
 		&__name
-			width: 28vw
-			height: 8.5vw
-			font-size: 4vw
+			min-width: 5vh
+			padding: 0 2.5vh
+			height: 5.3vh
+			font-size: 2.25vh
 			&::before
-				border-radius: 5vw
+				border: 3.4px solid transparent
+				border-radius: 10vh
+		&__exit-wrapper
+			right: -3.7vh
 		&__exit
-			height: 5vw
-			right: -6.5vw
+			height: 2.7vh
+
+@media (max-width: 576px)
+		.profile
+			top: 6.5vh
+			&__img
+				height: 20vh
+				width: 20vh
+			&__name
+				&::before
+					border: 2px solid transparent
 
 
 	
